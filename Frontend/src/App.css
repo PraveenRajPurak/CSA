@@ -1,0 +1,240 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f7f9fc;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  flex: 1;
+}
+
+header {
+  margin-bottom: 30px;
+  text-align: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #e1e4e8;
+  width: 100%;
+}
+
+header h1 {
+  color: #2c3e50;
+  font-size: 28px;
+}
+
+.password-container {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  width: 100%;
+}
+
+.password-container h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.password-container input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.password-container button {
+  width: 100%;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.main-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  width: 100%;
+}
+
+@media (max-width: 992px) {
+  .main-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form-container {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+textarea, input[type="text"], input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+textarea:focus, input[type="text"]:focus, input[type="password"]:focus {
+  border-color: #4a90e2;
+  outline: none;
+}
+
+.checkbox-group, .radio-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+@media (max-width: 576px) {
+  .checkbox-group, .radio-group {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.checkbox-item, .radio-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.checkbox-item input, .radio-item input {
+  margin-right: 8px;
+}
+
+.form-actions {
+  margin-top: 30px;
+}
+
+.submit-btn, .copy-btn {
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-btn:hover, .copy-btn:hover {
+  background-color: #3a7bc8;
+}
+
+.submit-btn:disabled {
+  background-color: #a0b8d8;
+  cursor: not-allowed;
+}
+
+.response-container {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  width: 100%;
+}
+
+.response-container h2 {
+  margin-bottom: 20px;
+  color: #2c3e50;
+  font-size: 20px;
+}
+
+.response-content {
+  background-color: #f5f7fa;
+  border: 1px solid #e1e4e8;
+  border-radius: 4px;
+  padding: 20px;
+  min-height: 200px;
+  margin-bottom: 20px;
+  white-space: pre-line;
+  line-height: 1.8;
+  overflow-wrap: break-word;
+}
+
+.empty-response {
+  background-color: #f5f7fa;
+  border: 1px solid #e1e4e8;
+  border-radius: 4px;
+  padding: 20px;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #777;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.error-message {
+  color: #e74c3c;
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: #fdedeb;
+  border-radius: 4px;
+}
+
+.copy-btn {
+  display: block;
+  margin-left: auto;
+}
+
+@media (max-width: 768px) {
+  .app-container {
+    padding: 10px;
+  }
+  
+  .form-container,
+  .response-container,
+  .password-container {
+    padding: 15px;
+  }
+  
+  header h1 {
+    font-size: 24px;
+  }
+}
